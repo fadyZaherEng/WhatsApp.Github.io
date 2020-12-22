@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LogInPhoneActivity">
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/loginPhoneToolBar"/>
+        <View
+            android:layout_below="@id/loginPhoneToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:id="@+id/top"
+            android:background="@color/colorPrimaryDark"
+           />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@id/loginPhoneToolBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/phone_icon"
+        android:src="@drawable/phone"
+        android:layout_marginTop="@dimen/_30sdp"/>
+
+        <View
+            android:layout_below="@id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            />
+
+
+    <TextView
+        android:layout_below="@+id/top"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_18ssp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/may_i_ask_your_phone_number"
+        android:textColor="#070707" />
+
+    <EditText
+        android:layout_marginStart="@dimen/_37sdp"
+        android:layout_marginEnd="@dimen/_37sdp"
+        android:gravity="start"
+        android:layout_gravity="center"
+        android:id="@+id/editTextMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:padding="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_baseline_phone_forwarded_24"
+        android:drawablePadding="@dimen/_10sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:hint="@string/enter_your_mobile_number"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:inputType="phone"
+        />
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/send_code"
+        android:layout_below="@id/editTextMobile"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_17ssp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        />
+
+</RelativeLayout>

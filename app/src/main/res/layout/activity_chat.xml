@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ChatActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="wrap_content"
+        android:id="@+id/ChatActivityToolBar"
+        android:background="@color/colorPrimaryDark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVChatActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linear"
+        android:layout_below="@id/ChatActivityToolBar"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linear"
+        android:background="@android:color/white"
+        >
+        <EditText
+            android:id="@+id/inputMassageChatActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_toEndOf="@+id/imgSendFileChatActivity"
+            android:layout_toStartOf="@+id/imgSendMassageChatActivity"
+            android:hint="@string/write_massage"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@android:color/white"
+            android:id="@+id/imgSendMassageChatActivity"
+            android:src="@drawable/ic_baseline_send_24"
+            />
+        <ImageButton
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_alignParentStart="true"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:background="@android:color/white"
+            android:id="@+id/imgSendFileChatActivity"
+            android:src="@drawable/send_files"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
